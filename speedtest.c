@@ -152,8 +152,7 @@ SEND_REQUEST_CONTINUE:
 
 	  
 	ret = send( fd,buffer,sizeof(buffer),0);
-	if (ret == -1)
-    {
+	if (ret == -1)	{
 		if (errno == EINTR)
 		{
 			goto SEND_REQUEST_CONTINUE;
@@ -164,8 +163,7 @@ SEND_REQUEST_CONTINUE:
 			pthread_exit( NULL);
 		}
 
-      
-    }	  
+	}	  
 	
 	int totle = 0;
 	int len = 0;
